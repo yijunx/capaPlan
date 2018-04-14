@@ -1,0 +1,12 @@
+"""
+
+
+this is to test the class in the basicClasses.py
+
+
+
+"""
+
+from basicClasses import Workstation
+
+
