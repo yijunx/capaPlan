@@ -11,6 +11,10 @@ import datetime
 
 
 class Workstation:
+
+    # def map_a_step(self, stepname, rpt, loadsize: 'use 1 for single wafer', util: 'put 0 if using WS util', inflow):
+    #    self.stepMatrix.append()
+    #    return 0
     def __init__(self, name, util: '0.67 for example'):
         """
 
@@ -20,22 +24,6 @@ class Workstation:
         self.name = name
         self.util = util
         self.stepMatrix = pd.DataFrame(columns=['step name'])
-
-    # def map_a_step(self, stepname, rpt, loadsize: 'use 1 for single wafer', util: 'put 0 if using WS util', inflow):
-    #    self.stepMatrix.append()
-    #    return 0
-
-    def map_steps_from_csv(self, csv_link):
-        """
-
-        :param csv_link:
-        :return:
-        """
-
-        self.stepMatrix = pd.read_csv(csv_link, index_col=0, header=0)
-        # need to check if there is duplicate combo and step/flow
-
-        return 0
 
     def update_a_step(self,
                       step_name,
@@ -117,4 +105,16 @@ class Workstation:
         return 0
 
     def export_to_csv(self):
+        return 0
+
+    def map_steps_from_csv(self, csv_link):
+        """
+
+        :param csv_link:
+        :return:
+        """
+
+        self.stepMatrix = pd.read_csv(csv_link, index_col=0, header=0)
+        # need to check if there is duplicate combo and step/flow
+
         return 0
