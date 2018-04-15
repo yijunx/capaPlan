@@ -15,17 +15,19 @@ print(aWS.stepMatrix)
 
 #to find steps
 print(aWS.stepMatrix.loc[aWS.stepMatrix['step name'] == '22 hcr'])
-print(aWS.stepMatrix.loc[(aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '123')])
-
-print(((aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '100s')).any())
-
-aWS.update_a_step('22 hcr', '101s', 'rpt', 2.5)
+aWS.add_a_step('22 hcr', 'new flow', 3, 4, 0.98)
 print(aWS.stepMatrix.loc[aWS.stepMatrix['step name'] == '22 hcr'])
+aWS.remove_a_step('22 hcr', 'new flow')
+
+
+print(aWS.stepMatrix)
+aWS.add_a_step('new step aa', 'new flow', 3, 4, 0.3)
+print(aWS.stepMatrix)
 
 # print(type((aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '123')).any())
 # if (aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '123'):
 #    print('its in there')
-# aWS.stepMatrix.drop('flow name2', axis='columns')
+# aWS.stepMatrix.drop('flow name2', axis='columns', inplace=True)
 # aWS.stepMatrix.to_csv('modelsStorage/stepMatrix.csv')
 
 

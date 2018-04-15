@@ -32,14 +32,14 @@ class Workstation:
         :return:
         """
 
-        self.stepMatrix = pd.read_csv(csv_link, header=0)
+        self.stepMatrix = pd.read_csv(csv_link, index_col=0, header=0)
         # need to check if there is duplicate combo and step/flow
 
         return 0
 
     def update_a_step(self,
                       step_name,
-                      in_flow: 'pull ALL for all flows',
+                      in_flow: 'flow name pls',
                       what_to_change: 'put rpt/ls/util',
                       new_value: 'put a number'):
         """
@@ -71,16 +71,31 @@ class Workstation:
 
         :return:
         """
+        if ((self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow)).any():
+            # the step is already in here....
+            print('this step is already here, cannot add, please modify')
+            return -1
 
+        new_step = pd.DataFrame(columns=list(self.stepMatrix.columns.values))
+        new_step.loc[0] = [step_name, in_flow, rpt, ls, util]
+        print(new_step)
+        self.stepMatrix = self.stepMatrix.append(new_step, ignore_index=True)
         # then arrange
         self.arrange_steps()
         return 0
 
-    def remove_steps(self):
-        """
+    def remove_a_step(self, step_name, in_flow):
+        if ((self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow)).any():
+            # it exits
+            target_index = self.stepMatrix.loc[
+                (self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow)].index
+            self.stepMatrix.drop(index=target_index, inplace=True)
+        else:
+            print('the step / flow not there....nothing to remove')
+            return 0
 
-        :return:
-        """
+        # then arange
+        self.arrange_steps()
         return 0
 
     def arrange_steps(self):
@@ -88,6 +103,9 @@ class Workstation:
 
         :return:
         """
+
+        self.stepMatrix.sort_values(by=['step name', 'flow name'], inplace=True)
+        self.stepMatrix.reset_index(drop=True, inplace=True)
         return 0
 
     def delete_column_in_matrix(self, column_name):
@@ -96,4 +114,7 @@ class Workstation:
         :param column_name:
         :return:
         """
+        return 0
+
+    def export_to_csv(self):
         return 0
