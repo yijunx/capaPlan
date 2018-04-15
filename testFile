@@ -9,4 +9,20 @@ this is to test the class in the basicClasses.py
 
 from basicClasses import Workstation
 
+aWS = Workstation('rpo', 0.83)
+aWS.map_steps_from_csv('modelsStorage/Workbook1.csv')
+print(type(aWS.stepMatrix))
+
+#to find steps
+print(aWS.stepMatrix.loc[aWS.stepMatrix['step name'] == '22 hcr'])
+print(aWS.stepMatrix.loc[(aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '123')])
+
+print(((aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '100s')).any())
+
+#print(type((aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '123')).any())
+#if (aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '123'):
+#    print('its in there')
+
+
+
 
