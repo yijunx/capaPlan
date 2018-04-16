@@ -7,7 +7,6 @@ Git hub is so good
 
 import pandas as pd
 import numpy as np
-import datetime
 
 
 class Workstation:
@@ -23,7 +22,7 @@ class Workstation:
         """
         self.name = name
         self.util = util
-        self.stepMatrix = pd.DataFrame(columns=['step name'])
+        # self.stepMatrix = pd.DataFrame(columns=['step name'])
 
     def update_a_step(self,
                       step_name,
@@ -43,7 +42,7 @@ class Workstation:
             return -2
 
         # check if the step_name/in_flow combo is new or existing in the matrix
-        if ((self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow)).any():
+        if any(np.array((self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow))):
             target_index = self.stepMatrix.loc[
                 (self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow)].index
             self.stepMatrix.at[target_index, what_to_change] = new_value
@@ -59,7 +58,7 @@ class Workstation:
 
         :return:
         """
-        if ((self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow)).any():
+        if any(np.array((self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow))):
             # the step is already in here....
             print('this step is already here, cannot add, please modify')
             return -1
@@ -73,7 +72,7 @@ class Workstation:
         return 0
 
     def remove_a_step(self, step_name, in_flow):
-        if ((self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow)).any():
+        if any(np.array((self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow))):
             # it exits
             target_index = self.stepMatrix.loc[
                 (self.stepMatrix['step name'] == step_name) & (self.stepMatrix['flow name'] == in_flow)].index
