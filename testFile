@@ -13,7 +13,7 @@ aWS = Workstation('rpo', 0.83)
 aWS.map_steps_from_csv('modelsStorage/stepMatrix.csv')
 print(aWS.stepMatrix)
 
-aWS.mass_update_a_step_name()
+aWS.mass_update()
 print(aWS.stepMatrix)
 
 aWS.export_to_csv()
