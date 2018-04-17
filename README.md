@@ -1,10 +1,10 @@
 # capaPlan
 ultimate capacity planning tool<br />
-here is the what we want to do<br />
+Here is the what we want to achieve<br />
 
-the essence is to move from doing the stuff to doing the stuff that do the stuff.<br />
+The essence is to move from doing the stuff to doing the stuff that do the stuff.<br />
 
-understand that our job is full of (resentful) repetition (cycles of MOR, ECN, GAP, are they NOT the same stuff?).<br />
+Understand that our job is full of (resentful) repetitions (cycles of MOR, ECN, GAP, are they NOT the same stuff?).<br />
 I want to eliminate repetition and make our jobs more meaningful.<br />
 because of repetition (and inefficiency of shared files, humongous excel files, antique company software), <br />
 we begin to question our value (why am i doing this #$%^?), <br />
