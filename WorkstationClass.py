@@ -128,13 +128,13 @@ class Workstation:
         :return:
         """
         # w['female'] = w['female'].map({'female': 1, 'male': 0})
-        self.stepMatrix['step name'] = self.stepMatrix['step name'].map({'': 'add butter', '': 'add sadness',
-                                                                         '': 'add sage', '': 'add flour'})
+        self.stepMatrix['step name'] = self.stepMatrix['step name'].map({'22 hcr': 'add butter', '22 ox': 'add sadness',
+                                                                         '59 rtp': 'add sage', '14 hcr': 'add flour'})
 
-        self.stepMatrix['flow name'] = self.stepMatrix['flow name'].map({'': 'cake of destiny',
-                                                                         '': 'biscuits of fate',
-                                                                         '': 'pasta of tears',
-                                                                         '': 'bubur hitam'})
+        self.stepMatrix['flow name'] = self.stepMatrix['flow name'].map({'100s': 'cake of destiny',
+                                                                         '110s': 'biscuits of fate',
+                                                                         '120s': 'pasta of tears',
+                                                                         '130s': 'bubur hitam'})
 
         self.arrange_steps()
 

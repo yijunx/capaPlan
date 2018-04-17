@@ -1,1 +1,13 @@
-index,step name,flow name,rpt,ls,util0,22 hcr,100s,3,1,01,22 ox,100s,4,1,0.82,59 rtp,100s,5,1,0.73,22 hcr,110s,3,1,04,22 ox,110s,4,1,0.85,59 rtp,110s,5,1,0.76,14 hcr,120s,3,1,07,22 ox,120s,7,1,0.88,59 rtp,120s,5,1,0.79,22 hcr,130s,3,1,010,22 ox,130s,4,1,0.811,59 rtp,130s,5,1,0.7
+,step name,flow name,rpt,ls,util
+0,add butter,biscuits of fate,3,1,0.0
+1,add butter,bubur hitam,3,1,0.0
+2,add butter,cake of destiny,3,1,0.0
+3,add flour,pasta of tears,3,1,0.0
+4,add sadness,biscuits of fate,4,1,0.8
+5,add sadness,bubur hitam,4,1,0.8
+6,add sadness,cake of destiny,4,1,0.8
+7,add sadness,pasta of tears,7,1,0.8
+8,add sage,biscuits of fate,5,1,0.7
+9,add sage,bubur hitam,5,1,0.7
+10,add sage,cake of destiny,5,1,0.7
+11,add sage,pasta of tears,5,1,0.7

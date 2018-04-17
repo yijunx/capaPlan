@@ -16,5 +16,5 @@ print(aWS.stepMatrix)
 aWS.mass_update_a_step_name()
 print(aWS.stepMatrix)
 
-
+aWS.export_to_csv()
 
