@@ -104,6 +104,7 @@ class Workstation:
         return 0
 
     def export_to_csv(self):
+        self.stepMatrix.to_csv('modelsStorage/stepMatrix.csv')
         return 0
 
     def map_steps_from_csv(self, csv_link):
@@ -117,3 +118,25 @@ class Workstation:
         # need to check if there is duplicate combo and step/flow
 
         return 0
+
+    def mass_update_a_step_name(self):
+        """
+        this one changes the step name in all flows
+        this is a one shot file... not for any purpose
+        :param old_step_name:
+        :param new_step_name:
+        :return:
+        """
+        # w['female'] = w['female'].map({'female': 1, 'male': 0})
+        self.stepMatrix['step name'] = self.stepMatrix['step name'].map({'': 'add butter', '': 'add sadness',
+                                                                         '': 'add sage', '': 'add flour'})
+
+        self.stepMatrix['flow name'] = self.stepMatrix['flow name'].map({'': 'cake of destiny',
+                                                                         '': 'biscuits of fate',
+                                                                         '': 'pasta of tears',
+                                                                         '': 'bubur hitam'})
+
+        self.arrange_steps()
+
+        return 0
+

@@ -13,18 +13,8 @@ aWS = Workstation('rpo', 0.83)
 aWS.map_steps_from_csv('modelsStorage/stepMatrix.csv')
 print(aWS.stepMatrix)
 
-#to find steps
-print(any((aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '1asd')))
-
-aWS.add_a_step('22 hcr', 'some new flow',3,4,0.78)
+aWS.mass_update_a_step_name()
 print(aWS.stepMatrix)
-
-
-# print(type((aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '123')).any())
-# if (aWS.stepMatrix['step name'] == '22 hcr') & (aWS.stepMatrix['flow name'] == '123'):
-#    print('its in there')
-# aWS.stepMatrix.drop('flow name2', axis='columns', inplace=True)
-# aWS.stepMatrix.to_csv('modelsStorage/stepMatrix.csv')
 
 
 
