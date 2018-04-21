@@ -28,12 +28,17 @@ def create_outs_target(start_date, number_of_intervals, interval_length):
     start_date = pd.to_datetime(start_date)
     print(start_date)
     print(start_date + timedelta(interval_length * number_of_intervals))
-    days = pd.date_range(start_date, start_date + timedelta(interval_length * number_of_intervals),
+    days = pd.date_range(start_date, start_date + timedelta(interval_length * (number_of_intervals - 1)),
                          freq=str(interval_length) + 'D')
-    outs_target = pd.DataFrame(index=days, columns=products())
+    outs_target = pd.DataFrame(data=np.random.randint(low=0, high=200, size=(number_of_intervals, len(products()))),
+                               index=days,
+                               columns=products())
     print(outs_target)
 
     return outs_target
 
 
-create_outs_target('2018-5-12', 6, 7)
+create_outs_target('2018-5-12', 60, 7).to_csv('modelsStorage/outs_target.csv')
+# output it..
+
+
