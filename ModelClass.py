@@ -30,6 +30,21 @@ class Model:
         self.list_of_WS = [Workstation(x, '0.8') for x in self.list_of_WS_names]
 
     def run_bucket(self):
+        """
+        this code assign loading to each WS...
+        which is a bit hardddd
+        how sure how to do shared ws stuffff
+        well ummm, this is the core portion of the whole thing
+
+        this portion should be able to first detect workstation group, then do balance all the time maybe
+        need to have all the weekly information ready at the first stages of this portion
+
+        then based on the ws attribute..
+        mmmm
+
+
+        :return:
+        """
         return 0
 
     def dup_a_model(self):
@@ -38,10 +53,21 @@ class Model:
     def update_scen_info(self):
         return 0
 
+    def ws(self, ws_name):
+        """
+
+
+        :param ws_name: some keywards of the ws name, not exact match also ok
+        :return: return the WS object
+        """
+        index_of_ws = [i for i, s in enumerate(self.list_of_WS_names) if ws_name in s][0]
+        return self.list_of_WS[index_of_ws]
+
 
 aModel = Model('modelsStorage/aStudyName')
 print(aModel.comments)
 print(aModel.list_of_WS_names)
+print(aModel.ws('baker').name)
 
 
 

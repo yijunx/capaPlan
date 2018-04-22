@@ -7,6 +7,7 @@ Git hub is so good
 
 import pandas as pd
 import numpy as np
+from LoadingClass import Loading
 
 
 class Workstation:
@@ -24,6 +25,8 @@ class Workstation:
         self.util = util
         self.stepMatrix = pd.DataFrame(columns=['step name'])
         self.toolCount = pd.DataFrame(columns=['step name'])
+        self.toolReqAvailTable = pd.DataFrame(columns=['step name'])
+        self.moveReceivedTable = pd.DataFrame(columns=['step name'])
 
     def update_a_step(self,
                       step_name,
@@ -144,4 +147,10 @@ class Workstation:
     def map_tool_count_from_csv(self, csv_link):
         self.toolCount = pd.read_csv(csv_link, index_col=0, header=0)
 
+        return 0
+
+    def run_bucket(self, a_loading):
+        return 0
+
+    def required_tool_of_a_time(self, moves):
         return 0
