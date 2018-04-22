@@ -104,8 +104,8 @@ class Workstation:
         """
         return 0
 
-    def export_to_csv(self):
-        self.stepMatrix.to_csv('modelsStorage/stepMatrix.csv')
+    def export_to_csv(self, csv_link):
+        self.stepMatrix.to_csv(csv_link)
         return 0
 
     def map_steps_from_csv(self, csv_link):

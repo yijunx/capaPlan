@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 
-csv_step_matrix_link = 'modelsStorage/stepMatrix.csv'
+csv_step_matrix_link = 'modelsStorage/ws_step_matrix/101_ingre_adder.csv'
 
 
 def products():
@@ -36,6 +36,10 @@ def create_outs_target(start_date, number_of_intervals, interval_length):
     print(outs_target)
 
     return outs_target
+
+
+def create_a_flow(flow_name):
+    return flow_name
 
 
 create_outs_target('2018-5-12', 60, 7).to_csv('modelsStorage/outs_target.csv')
