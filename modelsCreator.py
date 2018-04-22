@@ -42,7 +42,7 @@ def create_a_flow(flow_name):
     return flow_name
 
 
-create_outs_target('2018-5-12', 60, 7).to_csv('modelsStorage/outs_target.csv')
+create_outs_target('2018-5-12', 60, 7).to_csv('modelsStorage/BP1.csv')
 # output it..
 
 
