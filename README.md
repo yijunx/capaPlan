@@ -54,3 +54,4 @@ thus we need to: <br />
     1. Create a capacity simulation tool that is suitable for most of the manufacturing environments.<br />
     2. Create a scenario study pack to analyse what if conditions, and give summaries<br />
     3. move on to the capex changes<br />
+    4. michael added 4th point<br />
