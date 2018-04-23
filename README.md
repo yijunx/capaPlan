@@ -34,6 +34,8 @@ now here is the pitch and some question to answer <br />
         the number of people are reducing <br />
         the jobs people do contain a big portion of repetition <br />
         efforts are not spent in a more value adding way <br />
+        we also need a 1 stop sauce file as the base number we used in capacity planning, not that people no need to ask around <br />
+        or check the some official file which is outdated, or not practical <br />
     - why current issues are not solved despite the efforts <br />
         we tried to make 'MACROs' and other stuff to make our lives easier <br />
         they are not working as we are facing 2 facts.  <br />
