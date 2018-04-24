@@ -2,19 +2,59 @@
 ultimate capacity planning tool<br />
 Here is the what we want to achieve<br />
 
-The essence is to move from doing the stuff to doing the stuff that do the stuff.<br />
+The essence is to move from doing the tasks to doing the tasks that do the tasks.<br />
 
-Understand that our job is full of (resentful) repetitions (cycles of studies of all kinds and names, are they NOT the same stuff?).<br />
-I want to eliminate repetition and make our jobs more meaningful.<br />
-because of repetition (and inefficiency of shared files, humongous excel files, antique company software), <br />
-we begin to question our value (why am i doing this #$%^?), <br />
-we begin to feel frustration (mouse flied over), <br />
-we begin to regret (why am i here?????)<br />
+Understand that our job is full of repetitions. <br />
+Because of repetition (and inefficiency of shared files, humongous excel files, antique software), <br />
+Time is not spent in the most value adding way. There is too much time spent in creating/validating/scrutinizing a capacity file than analysing it and make the most value out of it.
+A method to represent/recreate/reanimate the way how capacity file is generated (cleanly/openly/sustainably) is urgently needed.
 
-hope you can join me to make this happen.<br />
+why urgent
+the number of scenario are increasing, so is the complexity, thus much more time is spent in trouble shooting<br />
+    half a day to dead line yet we are not sure how cycle time altered some numbers<br />
+the number of people are reducing <br />
+    we need a more efficient method<br />
+the jobs people do contain a big portion of repetition <br />
+    this will reduce amoutn of repetition and divert the energy to more value adding tasks<br />
+we also need a 1 stop sauce file as the base number we used in capacity planning, not that people no need to ask around <br />
+    hi, what is the rpt of xxxxxxxx<br />
+or check the some official file which is outdated, or not practical <br />
 
+cleanly:<br />
+    one number one file one name of its kind, ONLY<br />
+    all the files should have version control<br />
+    all the files should have standardized format, if not, warning follows<br />
+    grow the inclination to work towards least amount of exception possible<br />
+    reduce the eyeball tasks when we do adder (eg... small ls)<br />
+
+openly:<br />
+    currently the capacity calculation program is a black box to IE<br />
+    the capacity planners are not in control of the capacity planning tool<br />
+    thus we need a new program to have the openness, flexibility yet required a high degree of standardization<br />
+        (PDM is too closed and excel is too flexible)<br />
+        
+sustainability:
+    the success of a project does not mean work well once, but work well all the time and require least amount of maintenance<br />
+    why python offers a high degree of sustainability:<br />
+        it language is readable<br />
+        OOP will make sure each method is short and clean<br />
+        unlike excel, we are lost in tracing the formulas<br />
+        here in python, it is readable<br />
+        VBA is just impossible to maintain and too slow<br />
+        why the past project failed<br />
+    
+
+
+What will be achieved:<br />
 hopefully, with this we are able to cater for all kinds of requests in a more pleasant way, and the same job will not require more effort than a few lines of code.<br />
-the rest of time, we could dedicate to make this system more and more robust and up to the morning day requirement and latest patches of python package.<br />
+the rest of time, we could <br />
+    dedicate to make this system more and more robust <br />
+    spend more time to be as real IE <br />
+    
+what help is needed:<br />
+volunteered team<br />
+volunteered time in this time of lacking headcount in the team<br />
+we understand that ..<br />
 
 here is why python is chosen:<br />
 
@@ -28,24 +68,6 @@ why company software + excel is abandoned:<br />
 company software is developed in the 1999, function is rigid, thus we invented ADDER to make it flexible<br />
 ADDER in excel made thins better, also made things worse (chaotic version control, un-savable shared files, unreadable excel super long formulas, super inefficient VBA codes)<br />
 
-now here is the pitch and some question to answer <br />
-    - what is the current issues <br />
-        the number of scenario are increasing, so is the complexity <br />
-        the number of people are reducing <br />
-        the jobs people do contain a big portion of repetition <br />
-        efforts are not spent in a more value adding way <br />
-        we also need a 1 stop sauce file as the base number we used in capacity planning, not that people no need to ask around <br />
-        or check the some official file which is outdated, or not practical <br />
-    - why current issues are not solved despite the efforts <br />
-        we tried to make 'MACROs' and other stuff to make our lives easier <br />
-        they are not working as we are facing 2 facts.  <br />
-        one is the our planning program is too rigid, there is no way to either abandon or change it <br />
-        the other one is excel is too free for all, thus all the effort spent to standardize almost failed <br />
-    - why python is able to help <br />
-        it is not rigid and it required standardization to work <br />
-        however, lots of training is required and people are busy <br />
-    - what will it look like? <br />
-        still do the same thing, now instead of doing that, we use python to properly re-animate the things we do <br />
         
         
     
