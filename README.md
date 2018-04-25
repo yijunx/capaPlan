@@ -26,6 +26,7 @@ cleanly:<br />
     all the files should have standardized format, if not, warning follows<br />
     grow the inclination to work towards least amount of exception possible<br />
     reduce the eyeball tasks when we do adder (eg... small ls)<br />
+    will not do adder halfway, disturbed, forget to finish<br />
 
 openly:<br />
     currently the capacity calculation program is a black box to IE<br />
@@ -76,4 +77,3 @@ thus we need to: <br />
     1. Create a capacity simulation tool that is suitable for most of the manufacturing environments.<br />
     2. Create a scenario study pack to analyse what if conditions, and give summaries<br />
     3. move on to the capex changes<br />
-    4. michael added 4th point<br />
