@@ -1,7 +1,7 @@
 # capaPlan
 ultimate capacity planning tool<br />
 Here is the what we want to achieve<br />
-
+bucket is a tool, not a job
 The essence is to move from doing the tasks to doing the tasks that do the tasks.<br />
 
 Understand that our job is full of repetitions. <br />
