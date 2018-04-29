@@ -15,18 +15,34 @@ class Workstation:
     # def map_a_step(self, stepname, rpt, loadsize: 'use 1 for single wafer', util: 'put 0 if using WS util', inflow):
     #    self.stepMatrix.append()
     #    return 0
-    def __init__(self, name, util: '0.67 for example'):
+    def __init__(self, ws_link, ws_step_matrix_link, tool_count_link):
         """
-
         :param name:fff
         :param util:fff
         """
-        self.name = name
-        self.util = util
-        self.stepMatrix = pd.DataFrame(columns=['step name'])
-        self.toolCount = pd.DataFrame(columns=['step name'])
-        self.toolReqAvailTable = pd.DataFrame(columns=['step name'])
-        self.moveReceivedTable = pd.DataFrame(columns=['step name'])
+        self.name = os.path.split(ws_step_matrix_link)[1][:-4]
+        self.ws_link = ws_link
+        self.tool_count_link = tool_count_link
+        self.ws_step_matrix_link = ws_step_matrix_link
+        self.stepMatrix = pd.read_csv(self.ws_step_matrix_link, header = 0, index_col = 0)
+        ma_util_table = pd.read_csv(self.ws_link, header = 0, index_col = 0)
+        self.util = ma_util_table.loc[self.name, 'UTIL']
+        self.ma = ma_util_table.loc[self.name, 'MA']
+        tool_count_table = pd.read_csv(self.tool_count_link, header = 0, index_col = 0)
+        self.equip_list = tool_count_table[tool_count_table.WS == self.name]
+        
+        #those about bucket
+        #self.assigned_moves = pd.DataFrame()
+        self.bucket = CapacityReport(self.util, self.stepMatrix,pd.DataFrame(),self.equip_list)
+        
+    
+    def assign_moves(self, outs_target):
+        # self.assigned_moves = outs_target
+        self.bucket.assigned_moves = outs_target
+        self.bucket.is_report_latest = False
+        
+        
+
 
     def update_a_step(self,
                       step_name,
