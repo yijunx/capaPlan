@@ -23,10 +23,10 @@ from datetime import date, timedelta
 import matplotlib.pyplot as plt
 
 
-
 class CapacityReport:
     def __init__(self, ws_util: 'general WS util', ws_step_matrix: 'the dataframe', assigned_moves: 'loading dataframe', equip_list: 'ws.equiplist'):
-        self.is_report_latest = False #update to false if any, any assumption changed....
+        self.is_report_latest = False
+        # update to false if any, any assumption changed....
         self.comment = ''
         self.assigned_moves = assigned_moves
         self.util = ws_util
@@ -34,20 +34,18 @@ class CapacityReport:
         
         self.stepMatrix = ws_step_matrix
         self.report = pd.DataFrame()
-        
- 
-     
+
     def run_assigned_moves(self, start_study_date: 'MM/DD/YYYY', end_study_date: 'MM/DD/YYYY'):
         self.is_report_latest = True
         step_flow_combos = list(self.stepMatrix.STEP_NAME + ' of ' + self.stepMatrix.FLOW)
         bucket_columns = []
-        required_titles = ['MOVES','RPT','UTIL','LS','REQUIRED_TOOL']
+        required_titles = ['MOVES', 'RPT', 'UTIL', 'LS', 'REQUIRED_TOOL']
         
-        #well this is a lot of rows... but you can filter horizontally by
-        #df.filter(like='MOVES', axis=1)
-        #filter index col by
-        #df.filter(like='22 CELL NIT', axis=1)
-        
+        # well this is a lot of rows... but you can filter horizontally by
+        # df.filter(like='MOVES', axis=1)
+        # filter index col by
+        # df.filter(like='22 CELL NIT', axis=1)
+
         
         for atitle in required_titles:
             bucket_columns = bucket_columns + [x + ': ' + atitle for x in step_flow_combos]
