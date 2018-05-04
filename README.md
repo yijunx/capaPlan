@@ -66,14 +66,25 @@ fast to learn<br />
 
 why company software + excel is abandoned:<br />
 
-company software is developed in the 1999, function is rigid, thus we invented ADDER to make it flexible<br />
-ADDER in excel made thins better, also made things worse (chaotic version control, un-savable shared files, unreadable excel super long formulas, super inefficient VBA codes)<br />
+company software is developed in the past century, function is rigid, sometimes companies try to use excel as a add-on, to make it flexible<br />
+Excel does make things easier to approach, but also made things worse because: <br />
+chaotic version control, un-savable shared files, unreadable excel super long formulas, super inefficient VBA codes<br />
 
         
-        
-    
-
 thus we need to: <br />
     1. Create a capacity simulation tool that is suitable for most of the manufacturing environments.<br />
     2. Create a scenario study pack to analyse what if conditions, and give summaries<br />
     3. move on to the capex changes<br />
+
+what is our service:<br />
+    1. we give capacity solutions / advices based this project <br />
+    2. we can also give our project source code<br />
+    3. the service charge can be from customization<br />
+
+things to do:<br />
+    1. migrate to github
+        a. this includes clean up
+        b. make the code adpatable to mac/windows machines
+        c. we develop on github then download the components to sites
+    2. develop web based UI /  or pyGame
+  

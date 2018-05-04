@@ -41,6 +41,12 @@ def create_outs_target(start_date, number_of_intervals, interval_length):
 def create_a_flow(flow_name):
     return flow_name
 
+def create_a_equip_list():
+
+
+
+    return 0
+
 
 create_outs_target('2018-5-12', 60, 7).to_csv('modelsStorage/loading.csv')
 # output it..

@@ -7,6 +7,8 @@ Git hub is so good
 
 import pandas as pd
 import numpy as np
+import os
+from CapacityReportClass import CapacityReport
 from LoadingClass import Loading
 
 
@@ -170,3 +172,14 @@ class Workstation:
 
     def required_tool_of_a_time(self, moves):
         return 0
+
+
+    def record_actions(self, action):
+        """
+        this is to record all the changes to RAW DATA, and if the current bucket report is tally with the raw
+        thus you will need a
+        :param action:
+        :return:
+        """
+
+        return

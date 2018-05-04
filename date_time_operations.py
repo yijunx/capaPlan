@@ -5,9 +5,8 @@ Created on Sun Apr 29 16:09:37 2018
 @author: xuyijun
 """
 
-from datetime import date, timedelta
+from datetime import timedelta
 from datetime import datetime
-
 
 # adate = datetime.strptime('12/12/2018','%m/%d/%Y')
 # print(adate.strftime('%B %d, %Y))
@@ -38,10 +37,24 @@ def get_all_fridays(from_date: 'MM/DD/YYYY/', to_date: 'MM/DD/YYYY/', day_list=[
 
 
 def parse_a_matric(matric, moves_date):
-    the_matric_wanted_at_moves_date = matric
+
+    if ';' in matric:
+        # use the whatever thats has been writeen
+        the_matric_wanted_at_moves_date = matric
+
+        # imagine the string is '09/03/2018,20;9/3/2019,10'
+        # list_of_dates
+        # list_of_values
+
+    else:
+        return matric
+
     return the_matric_wanted_at_moves_date
 
 
 def write_a_matric():
     the_parse_able_string = 0
     return the_parse_able_string
+
+def check_a_matric():
+    return 0

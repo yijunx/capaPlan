@@ -6,15 +6,13 @@ this is to test the class in the WorkstationClass.py
 
 
 """
+import pandas as pd
+columns_of_equipList = ['ITEM_NO', 'ODD', 'TIQ', 'KNOWN_RLS_DATES', 'LID']
 
-from WorkstationClass import Workstation
 
-aWS = Workstation('rpo', 0.83)
-aWS.map_steps_from_csv('modelsStorage/aStudyName/ws_step_matrix/101_ingre_adder.csv')
-print(aWS.stepMatrix)
+equipList = pd.DataFrame(columns=columns_of_equipList)
 
-# aWS.mass_update()
-# print(aWS.stepMatrix)
 
-# aWS.export_to_csv()
+
+
 
