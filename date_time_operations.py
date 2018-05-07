@@ -23,7 +23,7 @@ def date_time_to_str_date(datetime_obj):
     return datetime_obj.strftime('%m/%d/%Y')
 
 
-def get_all_fridays(from_date: 'MM/DD/YYYY/', to_date: 'MM/DD/YYYY/', day_list=[4]):
+def get_all_fridays(from_date: 'MM/DD/YYYY/', to_date: 'MM/DD/YYYY/', day_list=[5]):
     tmp_list = list()
     date_list = list()
     # Creates a list of all the dates falling between the from_date and to_date range
@@ -38,7 +38,7 @@ def get_all_fridays(from_date: 'MM/DD/YYYY/', to_date: 'MM/DD/YYYY/', day_list=[
 
 def parse_a_matric(matric, moves_date):
 
-    if ';' in matric:
+    if ';' in str(matric):
         # use the whatever thats has been writeen
         the_matric_wanted_at_moves_date = matric
 

@@ -91,7 +91,7 @@ class CapacityReport:
         
         # now lets fill in the  rpt
         for a_step_flow in step_flow_combos:
-            list_of_RPT = [parse_a_matric(self.stepMatrix.at[a_step_flow,'RPT'],x) for x in list_of_moves_date]
+            list_of_RPT = [parse_a_matric(self.stepMatrix.at[a_step_flow, 'RPT'], x) for x in list_of_moves_date]
             self.report[a_step_flow + ': RPT'] = list_of_RPT
             
         
@@ -125,14 +125,14 @@ class CapacityReport:
         # need to total rls dates list
         rls_dates = []
         for index, row in self.equip_list.iterrows():
-            if pd.isnull(row.KNOWN_RLS_DATES):
-                to_append = row.CHAMBER_COUNT * [str_date_to_date_time(row.ODD) + timedelta(days = row.TIQ)]
+            if pd.isnull(row.RLS_DATES):
+                to_append = row.CHAMBER_COUNT * [str_date_to_date_time(row.IN_DATES) + timedelta(days=row.TIQ)]
                 rls_dates = rls_dates + to_append
             else:
-                to_append = [str_date_to_date_time(x) for x in row.KNOWN_RLS_DATES.split(',')]
+                to_append = [str_date_to_date_time(x) for x in row.RLS_DATES.split(',')]
                 rls_dates = rls_dates + to_append
         
-        print(rls_dates)
+        # print(rls_dates)
         
         self.report['TOOL_AVAIL'] = [sum([1 if x >= y else 0 for y in rls_dates]) for x in list(self.report.index)]
             
@@ -142,8 +142,11 @@ class CapacityReport:
         return 0
     
     def plot_chart(self):
-        plt.scatter(self.report.index, self.report.TOTAL_TOOL_REQ)
-        plt.show()
+        print('plottinggggg')
+        chart = self.report.plot(y='TOTAL_TOOL_REQ', use_index=True)
+        fig = chart.get_figure()
+        fig.savefig('modelsStorage/aStudyName/study_outputs/chart.png')
+        # plt.show(block=True)
 
     def tool_req_when(self):
         return 0

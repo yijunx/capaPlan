@@ -7,10 +7,31 @@ this is to test the class in the WorkstationClass.py
 
 """
 import pandas as pd
-columns_of_equipList = ['ITEM_NO', 'ODD', 'TIQ', 'KNOWN_RLS_DATES', 'LID']
+def processOneStuff(astr):
+    keepOnes = astr[5:]
+    yyyy = astr[0:4]
+    returnStr = keepOnes + '-' +yyyy
+
+    return returnStr
+
+loadingfile = pd.read_csv('modelsStorage/aStudyName/production_targets/loading.csv', header=0)
+print(loadingfile.head())
+loadingfile.rename(columns={'pasta_of_tears.BACKEND': 'pasta_of_tear.BACKEND'}, inplace=True)
+#print(list(loadingfile.columns.values))
+#useful_header =['biscuits of fate', 'bubur hitam', 'cake of destiny', 'pasta of tears']
+#for aheader in useful_header:
+#    loadingfile[aheader + '.FF'] = loadingfile[aheader]
+#    loadingfile[aheader + '.BACKEND'] = loadingfile[aheader]
+
+#print(loadingfile.head())
+
+loadingfile.set_index(keys = 'WEEK_START_DATE', inplace = True)
+loadingfile.to_csv('modelsStorage/aStudyName/production_targets/loading.csv')
+
+loadingfile = pd.read_csv('modelsStorage/aStudyName/production_targets/loading.csv', header=0)
+print(loadingfile.head())
 
 
-equipList = pd.DataFrame(columns=columns_of_equipList)
 
 
 
