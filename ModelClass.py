@@ -11,18 +11,18 @@ import glob
 import os
 
 
-# step_matrix_path - 'modelsStorage/aStudyName/ws_step_matrix'
-# load_quanti_path - 'modelsStorage/aStudyname/loadings_storage'
+# step_matrix_path - 'modelsStorage/aStudyName/tool_step_matrix'
+# load_quanti_path - 'modelsStorage/aStudyname/production_targets'
 # you also need a WS util table
 
 class Model:
     def __init__(self, model_folder_link):
-        self.scen_info = pd.read_csv(model_folder_link + '/scen_info.csv', index_col=0, header=0)
+        self.scen_info = pd.read_csv(model_folder_link + '/study_information.csv', index_col=0, header=0)
         self.scen_name = self.scen_info.at['scen_name', 'Value']
         self.loading_name = self.scen_info.at['loading_name', 'Value']
         self.model_name = self.scen_info.at['model_name', 'Value']
         self.comments = self.scen_info.at['comments', 'Value']
-        self.list_of_WS_links = [filename for filename in glob.glob(model_folder_link + '/ws_step_matrix/*.csv')]
+        self.list_of_WS_links = [filename for filename in glob.glob(model_folder_link + '/tool_step_matrix/*.csv')]
         self.list_of_WS_names = [os.path.split(x)[1][:-4] for x in self.list_of_WS_links]
         # self.loading = Loading()
         # self.name_of_modeling =

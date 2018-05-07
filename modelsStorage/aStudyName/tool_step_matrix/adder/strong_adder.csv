@@ -1,0 +1,13 @@
+KEY,STEP_NAME,FLOW,RPT,LS,UTIL,CT,LOAD_PCT,LOAD_PREF,SUB_FLOW
+strong_add_salt of biscuits_of_fate,strong_add_salt,biscuits_of_fate,2,1,0.65,3,1,,"FF,BACKEND"
+strong_add_sugar of biscuits_of_fate,strong_add_sugar,biscuits_of_fate,2,1,0.65,3,1,,"FF,BACKEND"
+strong_add_sausage of biscuits_of_fate,strong_add_sausage,biscuits_of_fate,2,1,0.65,3,1,,"FF,BACKEND"
+strong_add_butter of bubur_hitam,strong_add_butter,bubur_hitam,5,1,0.65,3,1,,"FF,BACKEND"
+strong_add_sage of bubur_hitam,strong_add_sage,bubur_hitam,5,1,0.65,3,1,,"FF,BACKEND"
+strong_add_sausage of bubur_hitam,strong_add_sausage,bubur_hitam,5,1,0.65,3,1,,"FF,BACKEND"
+strong_add_butter of cake_of_destiny,strong_add_butter,cake_of_destiny,9,1,0.65,3,1,,"FF,BACKEND"
+strong_add_salt of cake_of_destiny,strong_add_salt,cake_of_destiny,9,1,0.65,3,1,,"FF,BACKEND"
+strong_add_sugar of cake_of_destiny,strong_add_sugar,cake_of_destiny,9,1,0.65,3,1,,"FF,BACKEND"
+strong_add_butter of pasta_of_tear,strong_add_butter,pasta_of_tear,6,1,0.65,3,1,,"FF,BACKEND"
+strong_add_salt of pasta_of_tear,strong_add_salt,pasta_of_tear,6,1,0.65,3,1,,"FF,BACKEND"
+strong_add_sugar of pasta_of_tear,strong_add_sugar,pasta_of_tear,6,1,0.65,3,1,,"FF,BACKEND"

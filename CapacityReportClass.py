@@ -78,14 +78,15 @@ class CapacityReport:
             # list_of_moves = []
             # for a_move_date in list_of_outs_dates:
             # a_move = sum([self.assigned_moves.at[a_move_date, self.stepMatrix.at[a_step_flow, 'FLOW'] + subflow]
-            # for subflow in ['.FF','.PCMOS']])
+            # for sub_flow in ['.FF','.PCMOS']])
             #    list_of_moves.append(a_move)
             #    
             self.report[a_step_flow + ': MOVES'] = list_of_moves
             
             
             # [np.sum[self.assigned_moves.at[x,]
-            # [self.stepMatrix.at[a_step_flow,'FLOW'] + '.' + subflow for subflow in self.stepMatrix.at[a_step_flow,'SUB_FLOW'].split())]    ]
+            # [self.stepMatrix.at[a_step_flow,'FLOW'] + '.' + subflow
+            # for subflow in self.stepMatrix.at[a_step_flow,'SUB_FLOW'].split())]    ]
             # for x in list_of_moves_date]
         
         # now lets fill in the  rpt
@@ -116,7 +117,7 @@ class CapacityReport:
                     / self.report[a_step_flow + ': UTIL']
                     )
         
-        # now lets get totoal required
+        # now lets get total required
         to_sum_list = [x + ': REQUIRED_TOOL' for x in step_flow_combos]
         self.report['TOTAL_TOOL_REQ'] = self.report[to_sum_list].sum(axis=1)
         

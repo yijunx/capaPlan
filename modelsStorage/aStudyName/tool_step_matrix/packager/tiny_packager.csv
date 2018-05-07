@@ -1,0 +1,11 @@
+KEY,STEP_NAME,FLOW,RPT,LS,UTIL,CT,LOAD_PCT,LOAD_PREF,SUB_FLOW
+tiny_packag_butter of biscuits_of_fate,tiny_packag_butter,biscuits_of_fate,7,1,0.65,3,1,,"FF,BACKEND"
+tiny_packag_salt of biscuits_of_fate,tiny_packag_salt,biscuits_of_fate,7,1,0.65,3,1,,"FF,BACKEND"
+tiny_packag_sausage of biscuits_of_fate,tiny_packag_sausage,biscuits_of_fate,7,1,0.65,3,1,,"FF,BACKEND"
+tiny_packag_salt of bubur_hitam,tiny_packag_salt,bubur_hitam,6,1,0.65,3,1,,"FF,BACKEND"
+tiny_packag_sugar of bubur_hitam,tiny_packag_sugar,bubur_hitam,6,1,0.65,3,1,,"FF,BACKEND"
+tiny_packag_sausage of bubur_hitam,tiny_packag_sausage,bubur_hitam,6,1,0.65,3,1,,"FF,BACKEND"
+tiny_packag_salt of cake_of_destiny,tiny_packag_salt,cake_of_destiny,9,1,0.65,3,1,,"FF,BACKEND"
+tiny_packag_sugar of cake_of_destiny,tiny_packag_sugar,cake_of_destiny,9,1,0.65,3,1,,"FF,BACKEND"
+tiny_packag_salt of pasta_of_tear,tiny_packag_salt,pasta_of_tear,1,1,0.65,3,1,,"FF,BACKEND"
+tiny_packag_sausage of pasta_of_tear,tiny_packag_sausage,pasta_of_tear,1,1,0.65,3,1,,"FF,BACKEND"

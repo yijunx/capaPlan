@@ -1,0 +1,10 @@
+KEY,STEP_NAME,FLOW,RPT,LS,UTIL,CT,LOAD_PCT,LOAD_PREF,SUB_FLOW
+mild_form_butter of biscuits_of_fate,mild_form_butter,biscuits_of_fate,9,1,0.65,3,1,,"FF,BACKEND"
+mild_form_sage of biscuits_of_fate,mild_form_sage,biscuits_of_fate,9,1,0.65,3,1,,"FF,BACKEND"
+mild_form_sugar of bubur_hitam,mild_form_sugar,bubur_hitam,9,1,0.65,3,1,,"FF,BACKEND"
+mild_form_sage of bubur_hitam,mild_form_sage,bubur_hitam,9,1,0.65,3,1,,"FF,BACKEND"
+mild_form_sausage of bubur_hitam,mild_form_sausage,bubur_hitam,9,1,0.65,3,1,,"FF,BACKEND"
+mild_form_sugar of cake_of_destiny,mild_form_sugar,cake_of_destiny,6,1,0.65,3,1,,"FF,BACKEND"
+mild_form_sage of cake_of_destiny,mild_form_sage,cake_of_destiny,6,1,0.65,3,1,,"FF,BACKEND"
+mild_form_salt of pasta_of_tear,mild_form_salt,pasta_of_tear,4,1,0.65,3,1,,"FF,BACKEND"
+mild_form_sausage of pasta_of_tear,mild_form_sausage,pasta_of_tear,4,1,0.65,3,1,,"FF,BACKEND"

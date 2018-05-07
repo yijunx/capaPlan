@@ -1,0 +1,12 @@
+KEY,STEP_NAME,FLOW,RPT,LS,UTIL,CT,LOAD_PCT,LOAD_PREF,SUB_FLOW
+crazy_packag_butter of biscuits_of_fate,crazy_packag_butter,biscuits_of_fate,8,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_salt of biscuits_of_fate,crazy_packag_salt,biscuits_of_fate,8,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_sausage of biscuits_of_fate,crazy_packag_sausage,biscuits_of_fate,8,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_butter of bubur_hitam,crazy_packag_butter,bubur_hitam,1,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_salt of bubur_hitam,crazy_packag_salt,bubur_hitam,1,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_sugar of bubur_hitam,crazy_packag_sugar,bubur_hitam,1,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_butter of cake_of_destiny,crazy_packag_butter,cake_of_destiny,2,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_salt of cake_of_destiny,crazy_packag_salt,cake_of_destiny,2,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_sausage of cake_of_destiny,crazy_packag_sausage,cake_of_destiny,2,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_salt of pasta_of_tear,crazy_packag_salt,pasta_of_tear,8,1,0.65,3,1,,"FF,BACKEND"
+crazy_packag_sage of pasta_of_tear,crazy_packag_sage,pasta_of_tear,8,1,0.65,3,1,,"FF,BACKEND"
