@@ -167,9 +167,6 @@ class Workstation:
 
         return 0
 
-    def run_bucket(self, a_loading):
-        return 0
-
     def required_tool_of_a_time(self, moves):
         return 0
 
@@ -183,3 +180,4 @@ class Workstation:
         """
 
         return
+

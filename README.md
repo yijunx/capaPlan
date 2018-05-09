@@ -84,7 +84,8 @@ what is our service:<br />
 things to do:<br />
     1. migrate to github
         a. this includes clean up
-        b. make the code adpatable to mac/windows machines
+        b. make the code adpatable to mac/windows machines (which is almost done)
         c. we develop on github then download the components to sites
+        d. after chart plotting, should offer options to adjust tool count or observe conversions
     2. develop web based UI /  or pyGame
   

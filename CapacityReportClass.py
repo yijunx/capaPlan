@@ -143,11 +143,48 @@ class CapacityReport:
     
     def plot_chart(self):
         print('plottinggggg')
-        chart = self.report.plot(y='TOTAL_TOOL_REQ', use_index=True)
-        fig = chart.get_figure()
-        fig.savefig('modelsStorage/aStudyName/study_outputs/chart.png')
+
+
+        # chart = self.report.plot(y=['TOTAL_TOOL_REQ', 'TOOL_AVAIL'], use_index=True)
+        # fig = chart.get_figure()
+        #fig.savefig('modelsStorage/aStudyName/study_outputs/chart.png')
         # plt.show(block=True)
 
+        # pls incorporatet the code to resize the canvas...and move up the chart a bit..
+
+        fig = plt.figure()
+        bucket_dates = list(self.report.index.values)
+        # obs_dates = list(map(pd.to_datetime, obs_dates))
+        plt.plot(bucket_dates, self.report.TOOL_AVAIL, 'o', self.report.TOTAL_TOOL_REQ, 'o')
+        x = plt.gca().xaxis
+        # make the x labels vertical
+        for item in x.get_ticklabels():
+            item.set_rotation(90)
+
+        # legend
+        plt.legend(['TOOL AVAIL', 'TOOL REQ'], loc=1)
+
+        # X Y labels
+        plt.xlabel('WW')
+        plt.title('capacity for some workstation')
+        plt.ylabel('CHAMBERS')
+
+        fig.savefig('modelsStorage/aStudyName/study_outputs/chart.png')
+
+        """
+        import matplotlib.pyplot as plt
+        fig = plt.figure()
+        plt.plot(d,c1[0:100],'b--',d,c2[0:100],'r--',d,c3[0:100],'g--',figure = fig) 
+        plt.ylabel("concentration")
+        plt.xlabel("distance")
+        plt.show()
+        plt.savefig('./Results/evol_conc_v'+str(vinit)+'a_'+str(a)+'.png')
+        
+        fig.savefig('./Results/evol_conc_v'+str(vinit)+'a_'+str(a)+'.png') # Use fig. here
+        
+        line chart
+        
+        """
     def tool_req_when(self):
         return 0
     

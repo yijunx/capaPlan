@@ -39,7 +39,7 @@ def get_all_fridays(from_date: 'MM/DD/YYYY/', to_date: 'MM/DD/YYYY/', day_list=[
 def parse_a_matric(matric, moves_date):
 
     if ';' in str(matric):
-        # use the whatever thats has been writeen
+        # use the whatever thats has been written
         the_matric_wanted_at_moves_date = matric
 
         # imagine the string is '09/03/2018,20;9/3/2019,10'

@@ -97,7 +97,8 @@ crazyws.bucket.plot_chart()
 #print(crazyws.bucket.report.head())
 
 
-print('done')
+
+# print(crazyws.bucket.report.index.values)
 
 
 
